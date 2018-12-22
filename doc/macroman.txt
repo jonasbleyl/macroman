@@ -1,0 +1,101 @@
+*macroman.txt*           manage your vim macros
+
+       _ __ ___   __ _  ___ _ __ ___  _ __ ___   __ _ _ __           ~
+      | '_ ` _ \ / _` |/ __| '__/ _ \| '_ ` _ \ / _` | '_ \          ~
+      | | | | | | (_| | (__| | | (_) | | | | | | (_| | | | |         ~
+      |_| |_| |_|\__,_|\___|_|  \___/|_| |_| |_|\__,_|_| |_|         ~
+
+
+======================================================================
+CONTENTS                                            *MacromanContents*
+
+    1. Intro ................... |MacromanIntro|
+    2. Commands ................ |MacromanCommands|
+        2.1 MacroSave .......... |:MacroSave|
+        2.2 MacroList .......... |:MacroList|
+    3. Configuration ........... |MacromanConfig|
+    4. Mappings ................ |MacromanMappings|
+    5. License ................. |MacromonLicense|
+    6. Bugs .................... |MacromanBugs|
+    7. Contributing ............ |MacromanContributing|
+
+======================================================================
+Section 1: Intro                                       *MacromanIntro*
+
+If you've ever wanted to easily save your vim macros for later use
+then this plugin is for you.
+
+Macroman easily let's you save your macros and then goes one step
+further by providing an interface to manage and run your saved macros.
+
+======================================================================
+Section 2: Commands                                 *MacromanCommands*
+
+----------------------------------------------------------------------
+2.1 :MacroSave                                            *:MacroSave*
+
+The :MacroSave command will let you save your macro. By default this
+plugin will use the q register for this. This command expects you to
+pass a name which will allow you to identify this macro later. These
+macros are saved as files in the ~/.vim-macroman directory.
+
+Usage:
+
+    :MacroSave your-macro-name
+
+----------------------------------------------------------------------
+2.2 :MacroList                                            *:MacroList*
+
+Viewing your macros is done using the :MacroList command. This command
+will open a new split containing a list of your saved macros.
+
+Pressing q will close this split and return you to your previous
+buffer.
+
+Pressing dd will delete the macro for the current line.
+
+Finally, pressing Enter will run the currently selected macro. The
+:MacroList command can also be run while visually selecting multiple
+lines. This will make the selected macro run for each of the lines the
+visual selection.
+
+Usage:
+
+    :MacroList
+    :'<,'>MacroList
+
+======================================================================
+Section 3: Configuration                              *MacromanConfig*
+
+By default the :MacroSave command will save the contents of the q
+register. This can be configured by adding the option below into your
+:vimrc file.
+
+    let g:macroman_register = "q"
+
+======================================================================
+Section 4: Mappings                                 *MacromanMappings*
+
+There are no main mappings setup by default. Here are some example
+mappings that you might want to use to quickly save or list your
+macros.
+
+    noremap <leader>l :MacroList<cr>
+    nnoremap <leader>s :MacroSave<space>
+
+======================================================================
+Section 5: License                                   *MacromanLicense*
+
+Released under the MIT License.
+
+======================================================================
+Section 6: Bugs                                         *MacromanBugs*
+
+If you find a bug please post it on the issue tracker:
+https://github.com/jonasbleyl/macroman/issues/
+
+======================================================================
+Section 7: Contributing                         *MacromanContributing*
+
+If you'd like to improve this plugin then send a pull request to:
+https://github.com/jonasbleyl/macroman
