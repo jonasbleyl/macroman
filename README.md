@@ -35,6 +35,15 @@ register. This can be configured by adding the option below into your
 
     let g:macroman_register = "q"
 
+## Mappings
+
+There are no main mappings setup by default. Here are some example
+mappings that you might want to use to quickly save or list your
+macros.
+
+    noremap <leader>l :MacroList<cr>
+    nnoremap <leader>s :MacroSave<space>
+
 ## Installation
 
 Install the plugin using your favourite plugin manager.
