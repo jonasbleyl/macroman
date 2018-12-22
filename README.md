@@ -27,6 +27,18 @@ visual selection.
     :MacroList
     :'<,'>MacroList
 
+## Installation
+
+Install the plugin using your favourite plugin manager.
+
+**Pathogen**
+
+     git clone https://github.com/jonasbleyl/macroman ~/.vim/bundle/macroman
+
+**Vundle**
+
+      Plugin 'jonasbleyl/macroman'
+
 ## Configuration
 
 By default the `:MacroSave` command will save the contents of the `q`
@@ -43,15 +55,3 @@ macros.
 
     noremap <leader>l :MacroList<cr>
     nnoremap <leader>s :MacroSave<space>
-
-## Installation
-
-Install the plugin using your favourite plugin manager.
-
-**Pathogen**
-
-     git clone https://github.com/jonasbleyl/macroman ~/.vim/bundle/macroman
-
-**Vundle**
-
-      Plugin 'jonasbleyl/macroman'
