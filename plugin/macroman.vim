@@ -85,7 +85,6 @@ function! s:init_buffer()
   setlocal statusline=%=%l/%-2L
 endfunction
 
-
 function! s:pad(text, amount)
   return a:text . repeat(" ", a:amount - len(a:text))
 endfunction
